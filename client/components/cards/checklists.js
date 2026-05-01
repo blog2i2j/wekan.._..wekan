@@ -135,8 +135,11 @@ Template.checklists.events({
     event.preventDefault();
     const textarea = tpl.find('textarea.js-edit-checklist-item');
     const title = textarea.value.trim();
-    const checklist = Template.currentData().checklist;
-    checklist.setTitle(title);
+    const formData = Blaze.getData(event.currentTarget) || Blaze.getData(event.target);
+    const checklist = formData?.checklist;
+    if (checklist) {
+      checklist.setTitle(title);
+    }
   },
   'submit .js-add-checklist-item'(event, tpl) {
     event.preventDefault();
