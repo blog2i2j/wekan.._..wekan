@@ -89,7 +89,7 @@ version_bump_logic() {
   # 6. Update Wekan website (if applicable)
   if [ -d "../w/wekan.fi" ]; then
     INSTALL_PAGE="../w/wekan.fi/install/index.html"
-    METEOR_VER=$(grep -o 'METEOR@[^ "\\]*' .meteor/release | head -1)
+    METEOR_VER=$(grep -o 'METEOR@[^ "\\]*' .meteor/release | head -1 | sed 's/.*@//')
     NPM_VER=$(grep -o 'NPM_VERSION=[^ "\\]*' Dockerfile | head -1 | cut -d= -f2 | tr -d '"')
 
     (cd ../w/wekan.fi && git pull)
