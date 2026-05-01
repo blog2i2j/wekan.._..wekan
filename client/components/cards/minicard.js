@@ -53,7 +53,10 @@ Template.minicard.helpers({
     const board = this.board();
     let ret = false;
     if (board) {
-      ret = board.allowsMembersOnMinicard ?? false;
+      ret =
+        board.allowsMembers === null ||
+        board.allowsMembers === undefined ||
+        board.allowsMembers;
     }
     return ret;
   },
@@ -62,37 +65,40 @@ Template.minicard.helpers({
     const board = this.board();
     let ret = false;
     if (board) {
-      ret = board.allowsAssigneeOnMinicard ?? false;
+      ret =
+        board.allowsAssignee === null ||
+        board.allowsAssignee === undefined ||
+        board.allowsAssignee;
     }
     return ret;
   },
   showReceived() {
     const board = this.board();
-    return board ? board.allowsReceivedDateOnMinicard : false;
+    return board ? board.allowsReceivedDate : false;
   },
   showStart() {
     const board = this.board();
-    return board ? board.allowsStartDateOnMinicard : false;
+    return board ? board.allowsStartDate : false;
   },
   showDue() {
     const board = this.board();
-    return board ? board.allowsDueDateOnMinicard : false;
+    return board ? board.allowsDueDate : false;
   },
   showEnd() {
     const board = this.board();
-    return board ? board.allowsEndDateOnMinicard : false;
+    return board ? board.allowsEndDate : false;
   },
   showLabels() {
     const board = this.board();
-    return board ? board.allowsLabelsOnMinicard : false;
+    return board ? board.allowsLabels : false;
   },
   showCardNumber() {
     const board = this.board();
-    return board ? board.allowsCardNumberOnMinicard : false;
+    return board ? board.allowsCardNumber : false;
   },
   showSubtasks() {
     const board = this.board();
-    return board ? board.allowsSubtasksOnMinicard : false;
+    return board ? board.allowsSubtasks : false;
   },
 
   hiddenMinicardLabelText() {
