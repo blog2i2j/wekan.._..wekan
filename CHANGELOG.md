@@ -34,6 +34,8 @@ This release adds the following updates:
   Thanks to xet7.
 - [Docs: Added firewall config for Internet access from LXD Ubuntu container at Fedora Asahi Linux Remix, because building Linux arm64 .zip bundle of WeKan](https://github.com/wekan/wekan/commit/82c78ebd1efb888940ccf64affd23400f5485755).
   Thanks to xet7.
+- [Docs: Added Manual Parallel Snap](https://github.com/wekan/wekan/commit/eb824938cb750921bec721d80eab2670ba567869).
+  Thanks to xet7.
 
 Thanks to above GitHub users for their contributions and translators for their translations.
 
