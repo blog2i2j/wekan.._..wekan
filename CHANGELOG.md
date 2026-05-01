@@ -26,11 +26,18 @@ Versions:
 - WeKan 8.00-8.06 had wrong raw database directory setting /var/snap/wekan/common/wekan and some cards were not visible,
   it was fixed at WeKan 8.07 where database directory is back to /var/snap/wekan/common and all cards are visible.
 
-# Upcoming WeKan ® release
+# v9.05 2026-05-02 WeKan ® release
 
 This release adds the following updates:
 
 - [Update version script and dependencies](https://github.com/wekan/wekan/commit/4e77df9ff52ef2aed44e95ad4ef58d0cde6593b7).
+  Thanks to xet7.
+
+and fixes the following bugs:
+
+- Fix Snap Candidate attachments WRITABLE_PATH for Parallel Snap installs.
+  [Part 1](https://github.com/wekan/wekan/commit/cadd015d20e6b677fefb040ab8c5b1a3e972a394),
+  [Part 2](https://github.com/wekan/wekan/commit/cd2c69f5f05d932074ca80ae569cc8d836770f7b).
   Thanks to xet7.
 
 Thanks to above GitHub users for their contributions and translators for their translations.
