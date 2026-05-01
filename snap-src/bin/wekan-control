@@ -21,12 +21,15 @@ else
     fi
 fi
 
-# If uploads directory does not exist, create it.
+# If WRITABLE_PATH is not set, use $SNAP_COMMON/files
 # Wekan will store attachments there.
-export WRITABLE_PATH=$SNAP_COMMON/files
-if [ ! -d $WRITABLE_PATH ]; then
-  mkdir $WRITABLE_PATH
+if [ -z "$WRITABLE_PATH" ]; then
+    export WRITABLE_PATH="$SNAP_COMMON/files"
 fi
+# Create attachments and avatars directories
+mkdir -p "$WRITABLE_PATH/attachments"
+mkdir -p "$WRITABLE_PATH/avatars"
+echo -e "Using WRITABLE_PATH: $WRITABLE_PATH"
 
 echo -e "MONGO_URL=$MONGO_URL"
 APPLICATION_DIRECTORY=$SNAP
