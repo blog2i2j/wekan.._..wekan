@@ -74,7 +74,7 @@ template(name="minicard")
       +viewer
         if showCardNumber
           span.card-number
-            | ##{getCardNumber}
+            | ##{getCardNumber} &nbsp;
         = getTitle
     if showLabels
       if labels

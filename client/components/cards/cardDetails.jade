@@ -66,7 +66,7 @@ template(name="cardDetails")
             +viewer
               if currentBoard.allowsCardNumber
                 span.card-number
-                  | ##{getCardNumber}
+                  | ##{getCardNumber} &nbsp;
               = getTitle
             if isWatching
               i.card-details-watch
