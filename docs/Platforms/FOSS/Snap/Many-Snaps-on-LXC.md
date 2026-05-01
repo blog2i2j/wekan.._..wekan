@@ -104,10 +104,20 @@ sudo snap list
 ```
 If not, change to candidate:
 ```
-sudo snap refresh wekan_customer1 --channel=latest/candidate
+sudo snap refresh wekan_customer1 --channel=latest/candidate --amend
+```
+## Manual Parallel Snap
+
+If using manual snap package, with Parallel Snap, that has name wekan_other:
+```
+sudo snap refresh --dangerous wekan-VERSION.snap wekan_other --amend
+```
+Back to channel:
+```
+sudo snap refresh wekan_other --channel=latest/candidate --amend
 ```
 If it complains about old database version (was at stable), stop it, move old files somewhere safe, and start again.
-WARNING: this deletes 
+WARNING: this deletes stuff.
 ```
 sudo su
 mkdir old_customer1_common
