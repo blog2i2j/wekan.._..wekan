@@ -36,6 +36,8 @@ This release fixes the following bugs:
   Thanks to rileybroberts and xet7.
 - [Fix "Show on Minicard" board card preference lost after upgrading from 8.74 to 8.98 by changing back to original database field names without suffix OnMinicard](https://github.com/wekan/wekan/commit/f0a25358b44ecaba906dd30cfe871a51675dbc56).
   Thanks to brlin-tw and xet7.
+- [Fix: Added space between Card Number and Card Title at Minicard and Opened Card](https://github.com/wekan/wekan/commit/d04beea6f8797856806ee63df6cd30a0c6446bd5).
+  Thanks to xet7.
 
 Thanks to above GitHub users for their contributions and translators for their translations.
 
