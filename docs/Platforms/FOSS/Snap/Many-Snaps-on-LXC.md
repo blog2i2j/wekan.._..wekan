@@ -333,16 +333,21 @@ files.company.com {
 
 To server and LXC/LXD containers, install these packages:
 
+Ubuntu:
 ```
 sudo apt install libsquashfuse0 squashfuse fuse
 ```
-
+Fedora
+```
+sudo dnf install squashfuse fuse
+```
 Source: https://forum.snapcraft.io/t/system-does-not-fully-support-snapd/14767/11
 
 ## LXD init CIDR
 
 IPv4 CIDR: 10.1.1.1/24
 
+Ubuntu:
 ```
 sudo apt install snapd
 
@@ -351,7 +356,28 @@ sudo reboot
 sudo snap install lxd
 
 lxd init
+```
+Fedora:
+```
+sudo dnf install snapd
 
+sudo reboot
+
+sudo snap install lxd
+
+# Any Fedora Linux or Fedora Linux Asahi Remix at Apple Silicon:
+# Internet access from LXD container:
+# 1) Allow LXD-bridge:
+sudo firewall-cmd --zone=trusted --add-interface=lxdbr0 --permanent
+sudo firewall-cmd --reload
+# 2) Allow IP Masquerading:
+sudo firewall-cmd --zone=public --add-masquerade --permanent
+sudo firewall-cmd --reload
+
+lxd init
+```
+Answers for lxd init:
+```
 Would you like to use LXD clustering? (yes/no) [default=no]: 
 Do you want to configure a new storage pool? (yes/no) [default=yes]: 
 Name of the new storage pool [default=default]: 
@@ -418,7 +444,7 @@ Ubuntu Touch:
 ```
 sudo su
 
-snap install lxd --channel=5.21/stable
+snap install lxd
 ```
 
 3. From Ubuntu Touch Terminal, lxd init, etc.
