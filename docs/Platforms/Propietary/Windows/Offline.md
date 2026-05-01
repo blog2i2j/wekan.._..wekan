@@ -13,13 +13,13 @@ Right click and download files 1-4:
 1. [wekan-9.04-win64.zip](https://github.com/wekan/wekan/releases/download/v9.04/wekan-9.04-win64.zip)
 2. [node.exe](https://nodejs.org/dist/latest-v24.x/win-x64/node.exe)
 
-3. [mongodb-windows-x86_64-7.0.31-signed.msi](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.31-signed.msi)
+3. [mongodb-windows-x86_64-7.0.32-signed.msi](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.32-signed.msi)
 
 4. [start-wekan.bat](https://raw.githubusercontent.com/wekan/wekan/main/start-wekan.bat)
 
 5. Copy files from steps 1-4 with USB stick or DVD to offline Windows computer
 
-6. Double click `mongodb-windows-x86_64-7.0.31-signed.msi` . In installer, uncheck downloading MongoDB compass.
+6. Double click `mongodb-windows-x86_64-7.0.32-signed.msi` . In installer, uncheck downloading MongoDB compass.
 
 7. Unzip `wekan-9.04-win64.zip` , inside it is directory `bundle`, to it copy other files:
 
