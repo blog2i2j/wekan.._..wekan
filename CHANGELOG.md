@@ -28,7 +28,16 @@ Versions:
 
 # v9.04 2026-05-01 WeKan ® release
 
-This release fixes the following bugs:
+This release adds the following updates:
+
+- [Upgrade to MongoDB 7.0.32. Update version script.](https://github.com/wekan/wekan/commit/653c61081a8d9306fb0b152f6a3a497c2607a1cf).
+  Thanks to MongoDB developers and xet7.
+- [Upgrade to MongoDB 7.0.32 at Helm Chart](https://github.com/wekan/charts/commit/c55e9d3a130a7d259681185561b2741a64a8353e).
+  Thanks to MongoDB developers.
+- [Upgrade to MongoDB 7.0.32 at Windows Bundle docs](https://github.com/wekan/wekan/commit/2a3aa981d2ba02ec87981e3af843811e31328fea).
+  Thanks to MongoDB developers.
+
+and fixes the following bugs:
 
 - [Fix can not edit checklist title](https://github.com/wekan/wekan/commit/309b488861c29b4d74262f099ee11329f6d151c7).
   Thanks to xet7.
