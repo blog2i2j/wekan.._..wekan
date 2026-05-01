@@ -82,7 +82,7 @@ version_bump_logic() {
   sedi "s|appVersion = $OLD_NO_DOTS,|appVersion = $NEW_NO_DOTS,|g" sandstorm-pkgdef.capnp
 
   # Docker and Documentation
-  sedi "s|ARG VERSION=$OLD_VERSION-|ARG VERSION=$NEW_VERSION-|g" Dockerfile
+  sedi "s|ARG VERSION=$OLD_VERSION|ARG VERSION=$NEW_VERSION|g" Dockerfile
   sedi "s|wekan-$OLD_VERSION|wekan-$NEW_VERSION|g" docs/Platforms/Propietary/Windows/Offline.md
   sedi "s|/v$OLD_VERSION/|/v$NEW_VERSION/|g" docs/Platforms/Propietary/Windows/Offline.md
 
