@@ -434,17 +434,17 @@ sudo lxc profile set default security.nesting true
 5. Start new lxc container
 
 ```
-# launch-ubu2504.sh
+# launch-ubu2604.sh
 # lxc launch image-name container-name
-lxc launch ubuntu:25.04 ubu2504
+lxc launch ubuntu:26.04 ubu2604
 ```
 
 6. Bash shell to inside of container:
 
 ```
-# into-ubu2504.sh
+# into-ubu2604.sh
 # lxc exec container-name -- /bin/bash
-lxc exec ubu2504 -- /bin/bash
+lxc exec ubu2604 -- /bin/bash
 ```
 
 ## 3) Snapd and Wekan
@@ -471,7 +471,7 @@ You can also add more lxc containers to different subdomains and proxy to them i
 
 ### New Ubuntu container
 ```
-lxc launch images:ubuntu/20.04 lxccontainername
+lxc launch ubuntu:26.04 lxccontainername
 ```
 ### Inside LXC container
 ```
