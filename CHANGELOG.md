@@ -30,7 +30,9 @@ Versions:
 
 This release adds the following updates:
 
-- [Update docs lxc commands](https://github.com/wekan/wekan/commit/3c8db21d2f56eefe3d8b7f3228b580407a4fe89b).
+- [Docs: Update lxc commands](https://github.com/wekan/wekan/commit/3c8db21d2f56eefe3d8b7f3228b580407a4fe89b).
+  Thanks to xet7.
+- [Docs: Added firewall config for Internet access from LXD Ubuntu container at Fedora Asahi Linux Remix, because building Linux arm64 .zip bundle of WeKan](https://github.com/wekan/wekan/commit/82c78ebd1efb888940ccf64affd23400f5485755).
   Thanks to xet7.
 
 Thanks to above GitHub users for their contributions and translators for their translations.
