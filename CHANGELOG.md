@@ -32,6 +32,8 @@ This release fixes the following bugs:
 
 - [Fix can not edit checklist title](https://github.com/wekan/wekan/commit/309b488861c29b4d74262f099ee11329f6d151c7).
   Thanks to xet7.
+- [Fix Cannot delete card checklist title, by removing "Delete" and "Convert to Card" that belong to Checklist Items only. Checklist Menu already has Delete Checklist](https://github.com/wekan/wekan/commit/9defe9681b8091eec3037872882d0894fbdeeb20).
+  Thanks to rileybroberts and xet7.
 
 Thanks to above GitHub users for their contributions and translators for their translations.
 
