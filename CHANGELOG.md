@@ -26,7 +26,7 @@ Versions:
 - WeKan 8.00-8.06 had wrong raw database directory setting /var/snap/wekan/common/wekan and some cards were not visible,
   it was fixed at WeKan 8.07 where database directory is back to /var/snap/wekan/common and all cards are visible.
 
-# Upcoming WeKan ® release
+# v9.06 2026-05-02 WeKan ® release
 
 This release adds the following updates:
 
@@ -35,6 +35,11 @@ This release adds the following updates:
 - [Docs: Added firewall config for Internet access from LXD Ubuntu container at Fedora Asahi Linux Remix, because building Linux arm64 .zip bundle of WeKan](https://github.com/wekan/wekan/commit/82c78ebd1efb888940ccf64affd23400f5485755).
   Thanks to xet7.
 - [Docs: Added Manual Parallel Snap](https://github.com/wekan/wekan/commit/eb824938cb750921bec721d80eab2670ba567869).
+  Thanks to xet7.
+
+and fixes the following bugs:
+
+- [Fix Snap Candidate WRITABLE_PATH directory permissions at Parallel Snap file path /var/snap/wekan_SOMENAME/common/files/](https://github.com/wekan/wekan/commit/7556b3ed8e29b9edd074c1dd8c03a9b804787523).
   Thanks to xet7.
 
 Thanks to above GitHub users for their contributions and translators for their translations.
