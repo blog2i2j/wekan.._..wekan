@@ -110,7 +110,7 @@ sudo snap refresh wekan_customer1 --channel=latest/candidate --amend
 
 If using manual snap package, with Parallel Snap, that has name wekan_other:
 ```
-sudo snap refresh --dangerous wekan-VERSION.snap wekan_other --amend
+sudo snap install --dangerous wekan-VERSION.snap --name wekan_other
 ```
 Back to channel:
 ```
