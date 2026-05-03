@@ -26,12 +26,17 @@ Versions:
 - WeKan 8.00-8.06 had wrong raw database directory setting /var/snap/wekan/common/wekan and some cards were not visible,
   it was fixed at WeKan 8.07 where database directory is back to /var/snap/wekan/common and all cards are visible.
 
-# Upcoming WeKan ® release
+# v9.07 2026-05-02 WeKan ® release
 
 This release fixes the following CRITICAL SECURITY ISSUES of [AvatarBleed](https://wekan.fi/hall-of-fame/avatarbleed/):
 
 - [Fix avatars rce](https://github.com/wekan/wekan/commit/a4c74a5980e9f778eb444fd346f32aa3d16786a9).
   Thanks to Trung Nguyen from CyStack Security and xet7.
+
+and fixes the following bugs:
+
+- [Fix CleanDark theme](https://github.com/wekan/wekan/pull/6324).
+  Thanks to stegoh.
 
 Thanks to above GitHub users for their contributions and translators for their translations.
 
