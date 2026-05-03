@@ -3370,18 +3370,19 @@ THEME - Clean Light
 
 .board-color-cleanlight .list,
 .board-color-cleandark .list {
-  background: none;
-  border-left: none;
+  background: none !important;
+  border-left: none !important;
 }
 
 .board-color-cleanlight .list .list-header,
 .board-color-cleandark .list .list-header {
-  border-bottom: none;
-  display: flex;
+  border-bottom: none !important;
+  display: flex !important;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
-  background: none;
+  background: none !important;
+  background-color: transparent !important;
 }
 
 .board-color-cleanlight .list .list-header div:has(.list-header-name),
@@ -4277,6 +4278,14 @@ THEME - Clean Light
 .board-color-cleanlight .pop-over-list li > a,
 .board-color-cleandark .pop-over-list li > a {
   font-weight: 500;
+}
+
+.board-color-cleandark .pop-over-list li > a {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.board-color-cleanlight .pop-over-list li > a {
+  color: rgba(10, 10, 20, 0.85) !important;
 }
 
 .board-color-cleanlight .pop-over-list li > a i,
