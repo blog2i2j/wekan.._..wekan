@@ -52,13 +52,17 @@ const Avatars = new FilesCollection({
       filenameWithoutExtension = Math.random().toString(36).slice(2);
       fileId = Math.random().toString(36).slice(2);
     }
-    const ret = fileId + "-original-" + filenameWithoutExtension;
-    // remove fileId from meta, it was only stored there to have this information here in the namingFunction function
+    // Strip shell metacharacters and path-traversal sequences from the
+    // user-supplied portion of the filename.  The result is used as part of
+    // the on-disk path passed to external commands, so only safe characters
+    // (alphanumerics, hyphens, underscores, and dots) are kept.
+    const safeName = filenameWithoutExtension.replace(/[^a-zA-Z0-9_.\-]/g, '_');
+    const ret = fileId + "-original-" + safeName;
     return ret;
   },
   sanitize(str, max, replacement) {
-    // keep the original filename
-    return str;
+    // Strip characters that are dangerous in shell contexts and filesystem paths.
+    return str.replace(/[^a-zA-Z0-9_.\-]/g, '_');
   },
   onBeforeUpload(file) {
     // Block SVG files for avatars to prevent XSS attacks

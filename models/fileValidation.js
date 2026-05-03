@@ -1,20 +1,21 @@
 import { Meteor } from 'meteor/meteor';
-import { exec } from 'node:child_process';
+import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import fs from 'fs';
 
-let asyncExec;
+let asyncExecFile;
 
 if (Meteor.isServer) {
-  asyncExec = promisify(exec);
+  asyncExecFile = promisify(execFile);
 }
 
 async function detectMimeFromFile(filePath) {
   if (!Meteor.isServer) return undefined;
 
   try {
-    const escapedPath = String(filePath).replace(/"/g, '\\"');
-    const { stdout } = await asyncExec(`file --mime-type -b "${escapedPath}"`);
+    // Use execFile instead of exec so no shell is spawned and the path is
+    // passed as a direct argument — this eliminates shell injection entirely.
+    const { stdout } = await asyncExecFile('file', ['--mime-type', '-b', String(filePath)]);
     const mime = (stdout || '').trim().toLowerCase();
     if (!mime) return undefined;
     return { mime };
