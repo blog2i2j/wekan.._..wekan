@@ -33,6 +33,11 @@ This release adds the following updates:
 - [Release scripts: Add Snap Store scripts to list and publish revisions to channels, because snapcraft.io website currently does not work](https://github.com/wekan/wekan/commit/f7db51b457a771267ce381f294c8163fc0cad406).
   Thanks to xet7.
 
+and fixes the following bugs:
+
+- [Upgrade to Meteor 3.5-beta.10, changeStreams, DDP_TRANSPORT=uws](https://github.com/wekan/wekan/commit/330e0e35707c70a088cd8c452192265ba3df6fbd).
+  Thanks to Meteor developers.
+
 Thanks to above GitHub users for their contributions and translators for their translations.
 
 # v9.07 2026-05-02 WeKan ® release
