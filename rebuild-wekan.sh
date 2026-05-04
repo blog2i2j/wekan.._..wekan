@@ -81,7 +81,7 @@ do
 		#---------------------------------------------------------------------
 		# Logging of terminal output to console and to ../wekan-log.txt at end of this line: 2>&1 | tee ../wekan-log.txt
 		#WARN_WHEN_USING_OLD_API=true NODE_OPTIONS="--trace-warnings"
-		WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://localhost:4000 meteor run --port 4000 2>&1 | tee ../wekan-log.txt
+		DEFAULT_METEOR_REACTIVITY_ORDER="changeStreams,oplog,polling" DDP_TRANSPORT=uws DEBUG=true WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://localhost:4000 meteor run --port 4000 2>&1 | tee ../wekan-log.txt
 		#---------------------------------------------------------------------
 		break
 		;;
@@ -91,7 +91,7 @@ do
                 #Not in use, could increase RAM usage: NODE_OPTIONS="--max_old_space_size=4096"
                 #---------------------------------------------------------------------
                 # Logging of terminal output to console and to ../wekan-log.txt at end of this line: 2>&1 | tee ../wekan-log.txt
-                WARN_WHEN_USING_OLD_API=true NODE_OPTIONS="--trace-warnings" WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://localhost:4000 meteor run --port 4000 2>&1 | tee ../wekan-log.txt
+                DEFAULT_METEOR_REACTIVITY_ORDER="changeStreams,oplog,polling" DDP_TRANSPORT=uws DEBUG=true WARN_WHEN_USING_OLD_API=true NODE_OPTIONS="--trace-warnings" WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://localhost:4000 meteor run --port 4000 2>&1 | tee ../wekan-log.txt
                 #---------------------------------------------------------------------
                 break
                 ;;
@@ -101,7 +101,7 @@ do
 		#---------------------------------------------------------------------
 		#Logging of terminal output to console and to ../wekan-log.txt at end of this line: 2>&1 | tee ../wekan-log.txt
 		#WARN_WHEN_USING_OLD_API=true NODE_OPTIONS="--trace-warnings"
-		WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://localhost:4000 meteor run --port 4000 --extra-packages bundle-visualizer --production  2>&1 | tee ../wekan-log.txt
+		DEFAULT_METEOR_REACTIVITY_ORDER="changeStreams,oplog,polling" DDP_TRANSPORT=uws DEBUG=true WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://localhost:4000 meteor run --port 4000 --extra-packages bundle-visualizer --production  2>&1 | tee ../wekan-log.txt
 		#---------------------------------------------------------------------
 		break
 		;;
@@ -118,7 +118,7 @@ do
 		#---------------------------------------------------------------------
 		#Logging of terminal output to console and to ../wekan-log.txt at end of this line: 2>&1 | tee ../wekan-log.txt
 		#WARN_WHEN_USING_OLD_API=true NODE_OPTIONS="--trace-warnings"
-		DEBUG=true WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://$IPADDRESS:4000 meteor run --port 4000 2>&1 | tee ../wekan-log.txt
+		DEFAULT_METEOR_REACTIVITY_ORDER="changeStreams,oplog,polling" DDP_TRANSPORT=uws DEBUG=true WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://$IPADDRESS:4000 meteor run --port 4000 2>&1 | tee ../wekan-log.txt
 		#---------------------------------------------------------------------
 		break
 		;;
@@ -135,7 +135,7 @@ do
                 #---------------------------------------------------------------------
                 #Logging of terminal output to console and to ../wekan-log.txt at end of this line: 2>&1 | tee ../wekan-log.txt
                 #WARN_WHEN_USING_OLD_API=true NODE_OPTIONS="--trace-warnings"
-                MONGO_URL=mongodb://127.0.0.1:27019/wekan WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://$IPADDRESS:4000 meteor run --port 4000 2>&1 | tee ../wekan-log.txt
+                DEFAULT_METEOR_REACTIVITY_ORDER="changeStreams,oplog,polling" DDP_TRANSPORT=uws DEBUG=true MONGO_URL=mongodb://127.0.0.1:27019/wekan WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://$IPADDRESS:4000 meteor run --port 4000 2>&1 | tee ../wekan-log.txt
                 #---------------------------------------------------------------------
                 break
                 ;;
@@ -152,7 +152,7 @@ do
 		#---------------------------------------------------------------------
 		#Logging of terminal output to console and to ../wekan-log.txt at end of this line: 2>&1 | tee ../wekan-log.txt
 		#WARN_WHEN_USING_OLD_API=true NODE_OPTIONS="--trace-warnings"
-		WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://$IPADDRESS:$PORT meteor run --port $PORT 2>&1 | tee ../wekan-log.txt
+		DEFAULT_METEOR_REACTIVITY_ORDER="changeStreams,oplog,polling" DDP_TRANSPORT=uws DEBUG=true WRITABLE_PATH=.. WITH_API=true RICHER_CARD_COMMENT_EDITOR=false ROOT_URL=http://$IPADDRESS:$PORT meteor run --port $PORT 2>&1 | tee ../wekan-log.txt
 		#---------------------------------------------------------------------
 		break
 		;;
